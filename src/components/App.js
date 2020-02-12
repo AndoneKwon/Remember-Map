@@ -106,7 +106,7 @@ class App extends Component {
     return (
       <Fragment>
         <div id="vmap"></div>
-        <Sidebar handleItemClick={this.handleItemClick} />
+        <Sidebar handleItemClick={this.handleItemClick} isLogin={this.state.isLogin} />
         <Feed activeItem={this.state.activeItem} feedData={this.state.feedData} />
         <Login activeItem={this.state.activeItem} changeLoginState={this.changeLoginState} />
         <Join activeItem={this.state.activeItem} />
