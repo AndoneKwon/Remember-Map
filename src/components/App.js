@@ -79,6 +79,12 @@ class App extends Component {
       isLogin: status
     });
   }
+
+  setActiveItemNull = () => {
+    this.setState({
+      activeItem: null
+    });
+  }
   
   handleItemClick = (e) => {
     const clicked = e.currentTarget.id;
@@ -113,9 +119,9 @@ class App extends Component {
     return (
       <Fragment>
         <div id="vmap"></div>
-        <Sidebar handleItemClick={this.handleItemClick} isLogin={this.state.isLogin} changeLoginState={this.changeLoginState} />
+        <Sidebar handleItemClick={this.handleItemClick} isLogin={this.state.isLogin} changeLoginState={this.changeLoginState} setActiveItemNull={this.setActiveItemNull}/>
         <Feed activeItem={this.state.activeItem} feedData={this.state.feedData} />
-        <Login activeItem={this.state.activeItem} changeLoginState={this.changeLoginState} />
+        <Login activeItem={this.state.activeItem} changeLoginState={this.changeLoginState} setActiveItemNull={this.setActiveItemNull}/>
         <Join activeItem={this.state.activeItem} />
         <Post activeItem={this.state.activeItem} />
       </Fragment>

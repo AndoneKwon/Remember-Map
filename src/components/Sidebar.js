@@ -8,6 +8,7 @@ class Sidebar extends Component {
   handleLogout = () => {
     localStorage.clear();
     this.props.changeLoginState(false);
+    this.props.setActiveItemNull();
   }
 
   render() {

@@ -23,7 +23,14 @@ class Post extends Component {
       content: this.state.content
     }
 
-    axios.post("/post/create", data)
+    const headers = {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem("token")
+      }
+    };
+
+    axios.post("/post/create", data, headers)
     .then(res => {
       alert(res.data);
     })

@@ -29,6 +29,7 @@ class Login extends Component {
       localStorage.setItem("refreshToken", res.data.refreshToken);
 
       this.props.changeLoginState(true);
+      this.props.setActiveItemNull();
     })
     .catch(err => {
       console.log(err);
