@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Feed from './Feed';
 import Login from './Login';
 import Join from './Join';
+import Post from './Post';
 import Sidebar from './Sidebar';
 
 class App extends Component {
@@ -65,6 +66,12 @@ class App extends Component {
 
       window.markerLayer.addMarker(window.vw.ol3.markerOption);
     }
+
+    if (localStorage.getItem("token") !== null) {
+      this.setState({
+        isLogin: true
+      });
+    }
   }
 
   changeLoginState = (status) => {
@@ -106,10 +113,11 @@ class App extends Component {
     return (
       <Fragment>
         <div id="vmap"></div>
-        <Sidebar handleItemClick={this.handleItemClick} isLogin={this.state.isLogin} />
+        <Sidebar handleItemClick={this.handleItemClick} isLogin={this.state.isLogin} changeLoginState={this.changeLoginState} />
         <Feed activeItem={this.state.activeItem} feedData={this.state.feedData} />
         <Login activeItem={this.state.activeItem} changeLoginState={this.changeLoginState} />
         <Join activeItem={this.state.activeItem} />
+        <Post activeItem={this.state.activeItem} />
       </Fragment>
     );
   }

@@ -5,6 +5,11 @@ class Sidebar extends Component {
     super(props);
   }
 
+  handleLogout = () => {
+    localStorage.clear();
+    this.props.changeLoginState(false);
+  }
+
   render() {
     return (
       <nav id="sidebar">
@@ -18,7 +23,10 @@ class Sidebar extends Component {
                 <li id="login-on" className="mt-3" onClick={this.props.handleItemClick}>
                   <i class="fas fa-user-clock font-size-350"></i><p className="custom-p">알림</p>
                 </li>
-                <li id="join-on" className="mt-3" onClick={this.props.handleItemClick}>
+                <li id="post-on" className="mt-3" onClick={this.props.handleItemClick}>
+                  <i class="fas fa-paste font-size-350"></i><p className="custom-p">글 작성</p>
+                </li>
+                <li className="mt-3" onClick={this.handleLogout}>
                   <i class="fas fa-sign-out-alt font-size-350"></i><p className="custom-p">로그아웃</p>
                 </li>
               </ul> :
