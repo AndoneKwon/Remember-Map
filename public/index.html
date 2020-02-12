@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+
+    <title>React App</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #vmap {
+        width: 100vw;
+        height: 100vh;
+      }
+      div .head {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      #sidebar {
+        width: 100px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: black;
+        color: #fff !important;
+        text-align: center;
+        font-family: 'Jua', sans-serif !important;
+      }
+      #sidebar li {
+        color: white !important;
+      }
+      #sidebar li:hover {
+        color: deepskyblue !important;
+        text-decoration: none !important;
+        cursor: pointer;
+      }
+      article {
+        display: block;
+        width: 100%;
+      }
+      aside {
+        margin : 0 auto;
+      }
+      #feed {
+        background: #333;
+        width: 400px;
+        height: 100%;
+        top: 0;
+        left: -400px;
+        position: fixed;
+        transition: left .25s linear;
+        font-size: 150%;
+      }
+      #login {
+        background: #333;
+        width: 400px;
+        height: 100%;
+        top: 0;
+        left: -400px;
+        position: fixed;
+        transition: left .25s linear;
+      }
+      #signup {
+        background: #333;
+        width: 400px;
+        height: 100%;
+        top: 0;
+        left: -400px;
+        position: fixed;
+        transition: left .25s linear;
+      }
+      .out {
+        font-family: 'Jua', sans-serif !important;
+        text-align: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        left: 100px !important;
+      }
+      .mainarticle {
+        display: inline-block;
+        margin: 0 auto;
+        color: white;
+        width: 300px;
+      }
+      .custom-list {
+        margin-top: 30px;
+      }
+      .font-size-350 {
+        font-size: 350%;
+      }
+      .mg-top-10 {
+        margin-top: 10px;
+      }
+      .mg-right-10 {
+        margin-right: 10px;
+      }
+      .custom-p {
+        margin-top: 10px;
+        font-size: 125%;
+      }
+      .custom-head {
+        color : #fff;
+        font-size: 50px;
+      }
+      .custom-form {
+        font-size: 125% !important;
+      }
+      .custom-login-btn {
+        margin-top: 20px;
+        font-size: 150% !important;
+      }
+      .oauth-login-btn {
+        display: block;
+        margin-top: 30px;
+        font-size: 150% !important;
+        width: 300px !important;
+      }
+      .custom-article {
+        align-content: center;
+      }
+      .login-hr {
+        margin-top: 30px;
+        border: solid 1px white;
+      }
+      .feed-hr {
+        border: solid 1px white;
+      }
+      .feed-comment {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script type="text/javascript" src="http://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=290FB31C-CF30-3B8B-AB6E-99AC09251DBD"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </body>
+</html>
